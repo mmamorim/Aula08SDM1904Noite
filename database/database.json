@@ -1,0 +1,19 @@
+{
+  "clients": {
+    "cli01": {
+      "id": "cli01",
+      "nome": "ANA SILVA",
+      "email": "ana@ana.com"
+    },
+    "cli02": {
+      "id": "cli02",
+      "nome": "BIA SANTANA",
+      "email": "bia@bia.com"
+    },
+    "cli04": {
+      "id": "cli04",
+      "nome": "ABREU ALFACE",
+      "email": "abreu@abreu.com"
+    }
+  }
+}

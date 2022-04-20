@@ -1,21 +1,39 @@
+import db from "../database/db.js"
 
 const controller = {
 
-    list(req,res) {
+    get(req,res) {
         console.log("chegou um requisição GET na rota clients");
-        res.status(200).json({ algo: "oi GET"});
+        res.status(200).json(db.data.clients);
     },
-    add(req,res) {
+    post(req,res) {
         console.log("chegou um requisição POST na rota clients");
-        res.status(200).json({ algo: "oi POST"});
+        console.log("o que chegou no body",req.body);
+        db.data.clients[req.body.id] = {
+            id: req.body.id,
+            nome: req.body.nome,
+            email: req.body.email
+        }
+        db.write();
+        res.status(200).json(db.data.clients);
     },
-    update(req,res) {
+    put(req,res) {
         console.log("chegou um requisição PUT na rota clients");
-        res.status(200).json({ algo: "oi PUT"});
+        console.log("o que chegou no body",req.body);
+        db.data.clients[req.body.id] = {
+            id: req.body.id,
+            nome: req.body.nome,
+            email: req.body.email
+        }
+        db.write();
+        res.status(200).json(db.data.clients);
     },
-    remove(req,res) {
+    delete(req,res) {
         console.log("chegou um requisição DELETE na rota clients");
-        res.status(200).json({ algo: "oi DELETE"});
+        console.log("o que chegou no body",req.body);
+        delete db.data.clients[req.body.id];
+        db.write();
+        res.status(200).json(db.data.clients);
     },
 
 }

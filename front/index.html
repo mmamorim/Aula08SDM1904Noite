@@ -6,69 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
     <title>Meu teste</title>
 </head>
 
 <body>
-    <h1>Meu teste do servidor</h1>
-    <button id="btn1">GET</button>
-    <button id="btn2">POST</button>
-    <button id="btn3">PUT</button>
-    <button id="btn4">DELETE</button>
 
+    <div id="meuApp">
 
-    <script>
+        <topo></topo>
 
-        let b1 = document.getElementById("btn1");
-        let b2 = document.getElementById("btn2");
-        let b3 = document.getElementById("btn3");
-        let b4 = document.getElementById("btn4");
+        <div class="grid grid-cols-10">
+            <div class="col-span-1 border bg-gray-50 p-1">
+                <sidemenu></sidemenu>
+            </div>
+            <div class="col-span-9 p-2">
+                <painel></painel>
+            </div>
+        </div>
 
-        b1.addEventListener('click', () => {
-            axios.get('http://localhost:4000/clients')
-                .then((res) => {
-                    console.log("retorno do servidor");
-                    console.log(res.data);
-                })
-                .catch((e) => {
-                    console.log("erro", e);
-                });
-        });
+    </div>
 
-        b2.addEventListener('click', () => {
-            axios.post('http://localhost:4000/clients')
-                .then((res) => {
-                    console.log("retorno do servidor");
-                    console.log(res.data);
-                })
-                .catch((e) => {
-                    console.log("erro", e);
-                });
-        });
-
-        b3.addEventListener('click', () => {
-            axios.put('http://localhost:4000/clients')
-                .then((res) => {
-                    console.log("retorno do servidor");
-                    console.log(res.data);
-                })
-                .catch((e) => {
-                    console.log("erro", e);
-                });
-        });
-
-        b4.addEventListener('click', () => {
-            axios.delete('http://localhost:4000/clients')
-                .then((res) => {
-                    console.log("retorno do servidor");
-                    console.log(res.data);
-                })
-                .catch((e) => {
-                    console.log("erro", e);
-                });
-        });
-
-    </script>
+    <script src="./main.js" type="module"></script>
 </body>
 
 </html>
