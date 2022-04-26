@@ -1,4 +1,23 @@
 {
+  "filmes": {
+    "filme01": {
+      "id": "filme01",
+      "nome": "O Vento levou",
+      "ano": 1950
+    }
+  },
+  "products": {
+    "prod01": {
+      "id": "prod01",
+      "nome": "Coca-cola",
+      "tipo": "bebida"
+    },
+    "prod02": {
+      "id": "prod02",
+      "nome": "Guaraná",
+      "tipo": "bebida"
+    }
+  },
   "clients": {
     "cli01": {
       "id": "cli01",
