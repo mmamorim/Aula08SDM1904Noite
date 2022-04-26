@@ -1,5 +1,5 @@
 
-import controller from "../routes-controllers/clients.js"
+import controller from "../controllers/clients.js"
 const routeName = "/clients";
 
 function route(app) {

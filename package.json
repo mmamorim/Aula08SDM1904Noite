@@ -5,7 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node main.js",
+    "server": "nodemon server.js"
   },
   "author": "Marcelo",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "lowdb": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

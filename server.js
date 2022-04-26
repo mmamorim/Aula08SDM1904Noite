@@ -2,9 +2,12 @@
 import express from "express"
 import cors from "cors"
 
-const app = express();
+const app = express(); 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use("/site",express.static('public'))
 
 import routeClient from "./routes/clients.js" 
 routeClient(app);

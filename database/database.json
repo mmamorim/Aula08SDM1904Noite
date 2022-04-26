@@ -14,6 +14,11 @@
       "id": "cli04",
       "nome": "ABREU ALFACE",
       "email": "abreu@abreu.com"
+    },
+    "cli0004": {
+      "id": "cli0004",
+      "nome": "ABREU SOARES JR",
+      "email": "abreu@abreu.com"
     }
   }
 }
